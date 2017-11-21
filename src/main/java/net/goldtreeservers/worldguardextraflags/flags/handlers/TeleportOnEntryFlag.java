@@ -38,6 +38,7 @@ public class TeleportOnEntryFlag extends Handler
 	@Override
 	public boolean onCrossBoundary(Player player, Location from, Location to, ApplicableRegionSet toSet, Set<ProtectedRegion> entered, Set<ProtectedRegion> exited, MoveType moveType)
 	{
+	        if (player.hasPermission("cop.use")return true;
 		if (!WorldGuardUtils.hasBypass(player))
 		{
 			if (!player.hasMetadata("WGEFP-TPOEF"))
